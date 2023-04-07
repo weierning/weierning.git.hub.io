@@ -16,7 +16,7 @@
 <meta property="og:description" content="设计模式      单例模式    定义：一个类只能创建一个该类的对象（实列）   实现步骤（以类 A 为例）：">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-04-04T11:33:29.000Z">
-<meta property="article:modified_time" content="2023-04-07T02:56:42.269Z">
+<meta property="article:modified_time" content="2023-04-07T08:42:25.081Z">
 <meta property="article:author" content="唯耳柠">
 <meta property="article:tag" content="笔记">
 <meta name="twitter:card" content="summary">
@@ -241,7 +241,9 @@ return instance ;</p>
 <li>语法格式：<br>
  class 派生类：基类</li>
 <li>枚举 (enum)：是一个数字，所有枚举值构成一个集合，该集合的枚举值数量是有限的。默认从 0 开始。<br>
- 初始化：枚举类型。枚举名称。</li>
+ 初始化：枚举类型・枚举名称。</li>
+<li>当派生类对象被赋值给基类的引用时，此时如果通过基类引用来调用方法，调用的是基类的方法。<br>
+ 解决方法：基类加 vitrual (虚方法)，派生类加 override，即可对此方法进行重写。</li>
 </ul>
 
       
@@ -437,7 +439,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">笔记</a>
+                <a href="javascript:void(0)" class="js-tag color3">日记</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -445,7 +447,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">日记</a>
+                <a href="javascript:void(0)" class="js-tag color3">笔记</a>
               </li>
             
             <div class="clearfix"></div>
