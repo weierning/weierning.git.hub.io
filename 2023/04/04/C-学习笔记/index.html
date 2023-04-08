@@ -16,7 +16,7 @@
 <meta property="og:description" content="设计模式      单例模式    定义：一个类只能创建一个该类的对象（实列）   实现步骤（以类 A 为例）：">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-04-04T11:33:29.000Z">
-<meta property="article:modified_time" content="2023-04-07T10:53:36.816Z">
+<meta property="article:modified_time" content="2023-04-08T01:32:21.868Z">
 <meta property="article:author" content="唯耳柠">
 <meta property="article:tag" content="笔记">
 <meta name="twitter:card" content="summary">
@@ -209,21 +209,46 @@ public static A Ianstance( )<br>
 return instance ;</p>
 <p>}<br>
 <br><div align='center'><br>
-<font size="6">杂记</font></p>
+<font size="6">字典</font></p>
 </li>
 </ul>
-<div> <br>
+<div><br>
 <ul>
-<li>数组变量存储的不是数组内容，而是数组在内容中的首地址。</li>
-<li>const 变量的访问方式：类名・const 得到成员名</li>
-<li>readonly 变量的访问方式：对象名・readonly 的成员名</li>
-<li>readonly 的赋值有且只有两个地方：<br>
- 定义 readonly 变量时直接赋值<br>
- 使用构造器</li>
-<li>每个对象的 readonly 成员值可以不一样</li>
-<li>static 对象：一个变量被这个类的所有变量共享。一个类只能有一个静态变量（类名・成员名）<br>
-<br><div align='center'><br>
-<font size="6">ref 传参</font></li>
+<li>
+<p>键（key）：字典中的索引</p>
+</li>
+<li>
+<p>值（value）：字典中某个字的详细解释</p>
+</li>
+<li>
+<p>键值对的集合就是字典</p>
+</li>
+<li>
+<p>以电话本为例（用姓名查找电话）：<br>
+internal class Program<br><br>
+{<br>   <br>
+static void Main()<br> <br>
+{</p>
+<pre><code>      Dictionary&lt;string,string&gt; phonenumber = new Dictionary&lt;string,string&gt;();
+      phonenumber[&quot;张三&quot;]=&quot;023-123456&quot;;
+      phonenumber[&quot;李四&quot;]=&quot;023-223456&quot;;
+      phonenumber[&quot;王五&quot;]=&quot;023-323456&quot;;
+      try
+      &#123;
+          Console.WriteLine(phonenumber[&quot;赵六&quot;]);
+      &#125;
+      catch (Exception ex)
+      &#123;
+          Console.WriteLine(ex.Message);
+      &#125;
+      Console.ReadLine();
+
+  &#125;
+</code></pre>
+<p>}</p>
+<p><br><div align='center'><br>
+<font size="6">ref 传参</font></p>
+</li>
 </ul>
 <div>  
 <ul>
@@ -272,6 +297,35 @@ return instance ;</p>
  初始化：枚举类型・枚举名称。</li>
 <li>当派生类对象被赋值给基类的引用时，此时如果通过基类引用来调用方法，调用的是基类的方法。<br>
  解决方法：基类加 vitrual (虚方法)，派生类加 override，即可对此方法进行重写。</li>
+</ul>
+<div align='center'>
+<font size="6">多态</font>
+</div>  <br>
+<ul>
+<li>静态多态：<br>
+ 重载（overload）同名方法：参数多态<br>
+ 泛型：类型多态</li>
+<li>动态多态：<br>
+ 重写（override）虚方法：行为多态<br>
+   实现方法：<br>
+     基类的多态方法需要声明为 virtual<br>
+     派生类 overrid 基类的同名方法<br>
+   在使用时：<br>
+     将派生类对象赋值给基类变量<br>
+     用基类变量调用多态方法<br>
+<br><div align='center'><br>
+<font size="6">杂记</font></li>
+</ul>
+<div> <br>
+<ul>
+<li>数组变量存储的不是数组内容，而是数组在内容中的首地址。</li>
+<li>const 变量的访问方式：类名・const 得到成员名</li>
+<li>readonly 变量的访问方式：对象名・readonly 的成员名</li>
+<li>readonly 的赋值有且只有两个地方：<br>
+ 定义 readonly 变量时直接赋值<br>
+ 使用构造器</li>
+<li>每个对象的 readonly 成员值可以不一样</li>
+<li>static 对象：一个变量被这个类的所有变量共享。一个类只能有一个静态变量（类名・成员名）</li>
 </ul>
 
       
@@ -476,15 +530,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">笔记</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">日记</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
             
             <div class="clearfix"></div>
