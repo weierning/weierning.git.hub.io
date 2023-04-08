@@ -16,7 +16,7 @@
 <meta property="og:description" content="设计模式      单例模式    定义：一个类只能创建一个该类的对象（实列）   实现步骤（以类 A 为例）：">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-04-04T11:33:29.000Z">
-<meta property="article:modified_time" content="2023-04-08T01:32:21.868Z">
+<meta property="article:modified_time" content="2023-04-08T02:56:00.810Z">
 <meta property="article:author" content="唯耳柠">
 <meta property="article:tag" content="笔记">
 <meta name="twitter:card" content="summary">
@@ -229,23 +229,21 @@ internal class Program<br><br>
 {<br>   <br>
 static void Main()<br> <br>
 {</p>
-<pre><code>      Dictionary&lt;string,string&gt; phonenumber = new Dictionary&lt;string,string&gt;();
-      phonenumber[&quot;张三&quot;]=&quot;023-123456&quot;;
-      phonenumber[&quot;李四&quot;]=&quot;023-223456&quot;;
-      phonenumber[&quot;王五&quot;]=&quot;023-323456&quot;;
-      try
-      &#123;
-          Console.WriteLine(phonenumber[&quot;赵六&quot;]);
-      &#125;
-      catch (Exception ex)
-      &#123;
-          Console.WriteLine(ex.Message);
-      &#125;
-      Console.ReadLine();
-
-  &#125;
-</code></pre>
-<p>}</p>
+<p>    Dictionary&lt;string,string&gt; phonenumber = new Dictionary&lt;string,string&gt;();<br>
+       phonenumber [“张三”]=“023-123456”;<br><br>
+       phonenumber [“李四”]=“023-223456”;<br><br>
+      phonenumber [“王五”]=“023-323456”;<br><br>
+   try<br>
+{<br><br>
+       Console.WriteLine (phonenumber [“赵六”]);<br><br>
+     }<br><br>
+   catch (Exception ex)<br><br>
+      {<br><br>
+          Console.WriteLine(ex.Message);<br><br>
+      }<br><br>
+        Console.ReadLine();</p>
+<p>   }<br><br>
+}</p>
 <p><br><div align='center'><br>
 <font size="6">ref 传参</font></p>
 </li>
@@ -530,15 +528,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">笔记</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">日记</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
             
             <div class="clearfix"></div>
