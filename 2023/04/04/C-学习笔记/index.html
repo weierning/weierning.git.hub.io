@@ -16,7 +16,7 @@
 <meta property="og:description" content="设计模式      单例模式    定义：一个类只能创建一个该类的对象（实列）   实现步骤（以类 A 为例）：">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-04-04T11:33:29.000Z">
-<meta property="article:modified_time" content="2023-04-08T03:08:04.483Z">
+<meta property="article:modified_time" content="2023-04-08T11:01:41.527Z">
 <meta property="article:author" content="唯耳柠">
 <meta property="article:tag" content="笔记">
 <meta name="twitter:card" content="summary">
@@ -207,12 +207,29 @@ public static A Ianstance( )<br>
       instance = new A( );<br>
      }<br>
 return instance ;</p>
-<p>}</p>
+<p>} <br><br>
+<br><div align='center'><br>
+<font size="5">工厂模式</font></p>
+</li>
+</ul>
+<div><br>
+<ul>
+<li>
+<p>对修改封闭，对增加开放</p>
+</li>
+<li>
+<p>消灭 switch，改写为虚方法</p>
+</li>
+<li>
+<p>到底要实例化谁，将来会不会增加实例化对象，考虑用一个单独的类来做这个创造实列的过程</p>
+</li>
+<li>
+<p>返回别的类型的对象是依赖关系，拥有别的类型的对象是聚合关系，包含别的类似的对象是复合关系。</p>
 <p><br><div align='center'><br>
 <font size="6">字典</font></p>
 </li>
 </ul>
-<div>  
+</div>  
 <ul>
 <li>键（key）：字典中的索引</li>
 <li>值（value）：字典中某个字的详细解释</li>
@@ -286,7 +303,15 @@ internal class Program<br>{<br>   static void Main()<br>  {<br>
      派生类 overrid 基类的同名方法<br>
    在使用时：<br>
      将派生类对象赋值给基类变量<br>
-     用基类变量调用多态方法<br>
+     用基类变量调用多态方法</li>
+</ul>
+<p><br><div align='center'><br>
+<font size="6">抽象类</font></p>
+</div> <br>
+<ul>
+<li>有些类不希望被实例化，可将其创建为抽象类</li>
+<li>有些方法只用于规定派生类要实现的功能，而不具体实现某一功能，可以将其创建为抽象方法（abstract），如果一个方法被声明为抽象方法，那么它的类也必须是抽象类。派生类要实现抽象类的方法，需要进行重写。</li>
+<li>抽象类不能有任何实现，包括不能有 { }；<br>
 <br><div align='center'><br>
 <font size="6">杂记</font></li>
 </ul>
@@ -504,7 +529,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">日记</a>
+                <a href="javascript:void(0)" class="js-tag color3">笔记</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -512,7 +537,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">笔记</a>
+                <a href="javascript:void(0)" class="js-tag color3">日记</a>
               </li>
             
             <div class="clearfix"></div>
