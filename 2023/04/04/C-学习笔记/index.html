@@ -16,7 +16,7 @@
 <meta property="og:description" content="设计模式      单例模式    定义：一个类只能创建一个该类的对象（实列）   实现步骤（以类 A 为例）：">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-04-04T11:33:29.000Z">
-<meta property="article:modified_time" content="2023-04-11T00:40:58.223Z">
+<meta property="article:modified_time" content="2023-04-11T11:27:53.600Z">
 <meta property="article:author" content="唯耳柠">
 <meta property="article:tag" content="笔记">
 <meta name="twitter:card" content="summary">
@@ -228,6 +228,19 @@ return instance ;</p>
 <ul>
 <li>当我们要完成某一细节层次一致的一个过程或一系列步骤，但其个别步骤在更详细的层次上实现可能不同时。通常考虑使用模板方法。</li>
 <li>实现方法：定义一个操作中的算法的骨架，而将一些步骤延迟到子类中。模板方法使得子类可以不改变一个算法的结构即可重定义该算法某些特定步骤。</li>
+</ul>
+<div align='center'>
+<font size="6">接口</font>
+</div> <br>
+<ul>
+<li>规定了从其派生类必须要实现的操作</li>
+<li>特别的，一个接口描述了约定的有什么的（What）部分，而类实现了接口描述的如何（How）部分。</li>
+<li>接口操作必须是 public 的，所有不需再声明。</li>
+<li>一个类只能从一个基类继承，但可以实现多个接口。</li>
+<li>如果需要从多个基类继承，可以考虑从一个基类继承，并将其他基类定义为该类的一个成员。</li>
+<li>接口（interface）中所有的方法都是 public/abstract 的，不能加 override 关键字，只能包括接口方法</li>
+<li>抽象类可从接口继承，再让具向类从抽象类继承。</li>
+<li>迪米特法则：如果两个类不彼此直接通信，那么这两个类就不应当发生直接的相互作用。如果其中一个类需要调用另一个类的某一个方法的话，可以通过第三者转发这个调用。</li>
 </ul>
 <div align='center'>
 <font size="6">字典</font>
@@ -531,11 +544,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">日记</a>
+                <a href="javascript:void(0)" class="js-tag color3">笔记</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">笔记</a>
+                <a href="javascript:void(0)" class="js-tag color3">日记</a>
               </li>
              
               <li class="article-tag-list-item">
