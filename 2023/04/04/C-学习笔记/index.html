@@ -16,7 +16,7 @@
 <meta property="og:description" content="设计模式      单例模式    定义：一个类只能创建一个该类的对象（实列）   实现步骤（以类 A 为例）：">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-04-04T11:33:29.000Z">
-<meta property="article:modified_time" content="2023-04-13T01:55:39.164Z">
+<meta property="article:modified_time" content="2023-04-13T08:44:27.040Z">
 <meta property="article:author" content="唯耳柠">
 <meta property="article:tag" content="笔记">
 <meta name="twitter:card" content="summary">
@@ -339,7 +339,15 @@ internal class Program<br>{<br>   static void Main()<br>  {<br>
 <li>如果重载 Equals 方法必须覆盖 Equals 方法</li>
 <li>如果覆盖 Equals 方法必须覆盖 GetHanshCode 方法</li>
 <li>包含赋值的运算不能被重载<br>
-  += 会被拆成 + 和 =<br>
+  += 会被拆成 + 和 =</li>
+<li>重载转换运算符<br>
+  implicit 转换是安全的<br>
+  explicit 转换许愿造型</li>
+<li>提示：如果转换运算符可抛出异常或返回一个部分结果，应使用 explicit，如果转换可确保工作并且不会造成数据丢失，则可使用 implicit。</li>
+<li>public static explicit operator Time(int hours)<br>
+{…}// 负数时间不能转换为 Time 对象，所以要求强制转换</li>
+<li>public static explicit operator Time(Time t1)<br>
+{…}// 转换不会丢失任何内容<br>
 <br><div align='center'><br>
 <font size="6">杂记</font></li>
 </ul>
